@@ -17,5 +17,11 @@ xsltproc
 - OVT;http://radiobox2.omroep.nl/rss/ug/programme/28.rss
   
 ##Usage:
-  ./rss2m3u.sh
+- ./rss2m3u.sh
+
+or something like
+
+- crontab -e
+- 0 * * * * /root/rss2m3u.sh
+  
 

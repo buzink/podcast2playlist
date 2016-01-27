@@ -1,0 +1,6 @@
+OVT;http://radiobox2.omroep.nl/rss/ug/programme/28.rss
+BNR-digitaal;http://www.bnr.nl/radio/bnr-digitaal/?widget=rssfeed&view=podcastFeed&contentId=1907437
+Bureau Buitenland;http://radiobox2.omroep.nl/rss/ug/programme/80.rss
+Met het oog op morgen;http://radiobox2.omroep.nl/rss/ug/programme/16.rss
+Nieuwsshow;http://radiobox2.omroep.nl/rss/ug/programme/19.rss
+BNR-duurzaam;http://www.bnr.nl/radio/bnr-duurzaam/?widget=rssfeed&view=podcastFeed&contentId=1907437

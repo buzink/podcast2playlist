@@ -1,5 +1,5 @@
 # rss2m3u
-Bash script for Linux to convert podcast rss feeds to m3u playlist files. It allows you to stream episodes of radio shows Pi Musicbox, Volumio or other MPD clients
+Bash script for Linux to convert podcast rss feeds to m3u playlist files. It allows you to stream episodes of radio shows Pi Musicbox, Volumio or other MPD/Mopidy clients. I use it with Pi Musicbox on a Raspberry Pi with Raspbian Wheezer.
 
 ##Dependencies:
 xsltproc

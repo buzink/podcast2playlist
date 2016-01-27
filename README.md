@@ -8,6 +8,8 @@ xsltproc
 - apt-get install xsltproc
 - nano rss2m3u.sh
 - paste code in file
+- m3u.xls
+- paste code in file
 - change destination folder in code and save
 - chmod +x rss2m3u.sh
 - nano rssfeeds.txt

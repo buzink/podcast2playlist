@@ -1,5 +1,5 @@
 !/bin/bash
-#output folder
+#output folder (e.g. /var/lib/mopidy/playlists or /var/lib/mpd/playlists)
 PLFOLDER="/var/lib/mopidy/playlists"
 #output type (pls or m3u)
 PLTYPE="m3u"

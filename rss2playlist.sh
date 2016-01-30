@@ -19,6 +19,6 @@ do
         #extension="${filename##*.}"
         filename="${filename%.*}"
         echo "Converting rss file - $f"
-        xsltproc -o "$PLFOLDER"/"$filename"."$PLTYPE" "$PLTYPE".xls "$f"
+        xsltproc -o "$PLFOLDER"/"$filename"."$PLTYPE" "$PLTYPE".xsl "$f"
 done 
 #chmod 777 "$PLFOLDER"/*."$PLTYPE"

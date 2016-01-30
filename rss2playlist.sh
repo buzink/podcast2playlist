@@ -1,4 +1,9 @@
-#!/bin/bash
+!/bin/bash
+#output folder
+PLFOLDER="/var/lib/mopidy/playlists"
+#output type (pls or m3u)
+PLTYPE="m3u"
+
 #download rss feeds
 while read p; do
   echo "${p%;*}"
@@ -6,7 +11,7 @@ while read p; do
   wget "${p##*;}" -O "${p%;*}".rss      
 done <rssfeeds.txt
 
-#convert rss feeds to m3u
+#convert rss feeds to playlist
 shopt -s nullglob
 for f in *.rss
 do
@@ -14,5 +19,6 @@ do
         #extension="${filename##*.}"
         filename="${filename%.*}"
         echo "Converting rss file - $f"
-        xsltproc -o /var/lib/mopidy/playlists/"$filename".m3u m3u.xls "$f"
-done
+        xsltproc -o "$PLFOLDER"/"$filename"."$PLTYPE" "$PLTYPE".xls "$f"
+done 
+#chmod 777 "$PLFOLDER"/*."$PLTYPE"

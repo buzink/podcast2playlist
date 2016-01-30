@@ -1,8 +1,8 @@
-!/bin/bash
-#output folder (e.g. /var/lib/mopidy/playlists or /var/lib/mpd/playlists)
-PLFOLDER="/var/lib/mopidy/playlists"
+#!/bin/bash
+#output folder /var/lib/mopidy/playlists or /var/lib/mpd/playlists or /var/lib/mpd/music/WEBRADIO/
+PLFOLDER="/var/lib/mpd/playlists"
 #output type (pls or m3u)
-PLTYPE="m3u"
+PLTYPE="pls"
 
 #download rss feeds
 while read p; do
@@ -20,5 +20,5 @@ do
         filename="${filename%.*}"
         echo "Converting rss file - $f"
         xsltproc -o "$PLFOLDER"/"$filename"."$PLTYPE" "$PLTYPE".xsl "$f"
+        #cp "$PLFOLDER"/"$filename"."$PLTYPE" /var/lib/mpd/music/WEBRADIO/
 done 
-#chmod 777 "$PLFOLDER"/*."$PLTYPE"

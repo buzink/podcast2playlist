@@ -7,20 +7,20 @@ xsltproc
 ##Installation on Debian/Ubuntu:
 - sudo apt-get update
 - sudo apt-get install xsltproc
-- download files into directory /home/volumio/rss2pls
-- nano rss2playlist.sh
+- download files into directory /home/volumio/podcast2playlist
+- nano podcast2playlist.sh
 - change destination folders and script folder in code and save
-- chmod +x rss2m3u.sh
+- chmod +x podcast2playlist.sh
 - nano rssfeeds.txt
 - paste rss feeds, 1 per line, like 
 - OVT;http://radiobox2.omroep.nl/rss/ug/programme/28.rss
   
 ##Usage:
-- ./rss2playlist.sh
+- ./home/volumio/podcast2playlist/podcast2playlist.sh
 
 or something like
 
 - crontab -e
-- 0 * * * * /home/volumio/rss2pls/rss2playlist.sh
+- 0 * * * * /home/volumio/podcast2playlist/podcast2playlist.sh
   
 

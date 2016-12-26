@@ -16,7 +16,7 @@ xsltproc
 - OVT;http://radiobox2.omroep.nl/rss/ug/programme/28.rss
   
 ##Usage:
-- ./home/volumio/podcast2playlist/podcast2playlist.sh
+- /home/volumio/podcast2playlist/podcast2playlist.sh
 
 or something like
 

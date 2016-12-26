@@ -21,6 +21,6 @@ xsltproc
 or something like
 
 - crontab -e
-- 0 * * * * /root/rss2playlist.sh
+- 0 * * * * /home/volumio/rss2pls/rss2playlist.sh
   
 

@@ -1,12 +1,13 @@
 #!/bin/bash
-#output folder /var/lib/mopidy/playlists or /var/lib/mpd/playlists or /var/lib/mpd/music/WEBRADIO
+#output folder /var/lib/mopidy/playlists or /var/lib/mpd/playlists or /var/lib/mpd/music/WEBRADIO or /data/playlist
 PLFOLDER="/var/lib/mpd/playlists"
-PLFOLDER2="/var/lib/mpd/music/WEBRADIO"
-#output type (pls or m3u)
+PLFOLDER2="/data/playlist"
+#output type (pls, m3u of Volumio 2)
 PLTYPE="m3u"
 PLTYPE2="pls"
+PLTYPE3="volumio.xsl"
 
-cd /root/rss2pls/
+cd /home/volumio/rss2pls/
 
 #download rss feeds
 while read p; do
@@ -24,5 +25,8 @@ do
         filename="${filename%.*}"
         echo "Converting rss file - $f"
         xsltproc -o "$PLFOLDER"/"$filename"."$PLTYPE" "$PLTYPE".xsl "$f"
-        xsltproc -o "$PLFOLDER2"/"$filename"."$PLTYPE2" "$PLTYPE2".xsl "$f"
+        #xsltproc -o "$PLFOLDER2"/"$filename"."$PLTYPE2" "$PLTYPE2".xsl "$f"
+        xsltproc -o "$PLFOLDER2"/"$filename" "$PLTYPE3" "$f"
+	sed -i '$ s/.$//' "$PLFOLDER2"/"$filename"
+	echo "]" >> "$PLFOLDER2"/"$filename"
 done 

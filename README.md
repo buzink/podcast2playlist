@@ -1,4 +1,4 @@
-# rss2playlist
+# podcast2playlist
 Bash script for Linux to convert podcast rss feeds to m3u, pls and Volumio 2 playlist files. It allows you to stream episodes of radio shows to Pi Musicbox, Volumio or other MPD/Mopidy clients. Tested with Pi Musicbox, Volumio 1 and Volumio 2 on a Raspberry Pi with Raspbian Jessie.
 
 ##Dependencies:
